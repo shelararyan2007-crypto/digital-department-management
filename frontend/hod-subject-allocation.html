@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Subject Allocation - Department Management Portal
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+         ===================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         SHARED CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="src/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Topbar.css"
+    >
+
+
+    <!-- =====================================================
+         SUBJECT ALLOCATION CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="src/css/subject-allocation.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <div class="dashboard-page">
+
+
+        <!-- =================================================
+             BACKGROUND
+             ================================================= -->
+
+        <div class="dashboard-background"></div>
+
+        <div class="dashboard-background-overlay"></div>
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+                    AM
+                </div>
+
+                <div class="sidebar-title">
+
+                    <h2>
+                        Department
+                    </h2>
+
+                    <span>
+                        Management Portal
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <!-- Dashboard -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="dashboard"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </button>
+
+
+                <!-- Teachers -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="teachers"
+                >
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                    <span>
+                        Teachers
+                    </span>
+
+                </button>
+
+
+                <!-- Students -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="students"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        Students
+                    </span>
+
+                </button>
+
+
+                <!-- Subjects -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="subjects"
+                >
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>
+                        Subjects
+                    </span>
+
+                </button>
+
+
+                <!-- Subject Allocation -->
+
+                <button
+                    type="button"
+                    class="sidebar-item active"
+                    data-section="subject-allocation"
+                >
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+
+                    <span>
+                        Subject Allocation
+                    </span>
+
+                </button>
+
+
+                <!-- Timetable -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="timetable"
+                >
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        Timetable
+                    </span>
+
+                </button>
+
+
+                <!-- Attendance -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="attendance"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>
+                        Attendance
+                    </span>
+
+                </button>
+
+
+                <!-- Tasks -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="tasks"
+                >
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <span>
+                        Tasks
+                    </span>
+
+                </button>
+
+
+                <!-- Events -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="events"
+                >
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        Events
+                    </span>
+
+                </button>
+
+
+                <!-- Announcements -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="announcements"
+                >
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                    <span>
+                        Announcements
+                    </span>
+
+                </button>
+
+
+                <!-- Analytics -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="analytics"
+                >
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <span>
+                        Analytics
+                    </span>
+
+                </button>
+
+
+                <!-- Reports -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="reports"
+                >
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>
+                        Reports
+                    </span>
+
+                </button>
+
+            </nav>
+
+
+            <!-- Logout -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    class="sidebar-logout"
+                    id="logoutBtn"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+
+                <div class="topbar-left">
+
+                    <h1>
+                        Subject Allocation
+                    </h1>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <div class="topbar-user">
+
+                        <div
+                            class="topbar-user-avatar"
+                            id="userAvatar"
+                        >
+                            H
+                        </div>
+
+                        <div class="topbar-user-info">
+
+                            <strong id="userName">
+                                HOD
+                            </strong>
+
+                            <span id="userRole">
+                                Head of Department
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 SUBJECT ALLOCATION CONTENT
+                 ================================================= -->
+
+            <section class="allocation-content">
+
+
+                <!-- PAGE HEADER -->
+
+                <div class="allocation-page-header">
+
+                    <div>
+
+                        <div class="allocation-title-row">
+
+                            <h2>
+                                Subject Allocation
+                            </h2>
+
+                            <span
+                                class="allocation-department-badge"
+                                id="departmentBadge"
+                            >
+                                Department
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Assign approved teaching staff to subjects
+                            for each class division.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     FILTER PANEL
+                     ================================================= -->
+
+                <div class="allocation-filter-panel">
+
+
+                    <!-- Academic Year -->
+
+                    <div
+                        class="allocation-filter-group"
+                        id="academicYearGroup"
+                    >
+
+                        <label for="academicYear">
+                            Academic Year
+                        </label>
+
+                        <select id="academicYear">
+
+                            <option value="">
+                                Select Academic Year
+                            </option>
+
+                            <option value="SE">
+                                Second Year (SE)
+                            </option>
+
+                            <option value="TE">
+                                Third Year (TE)
+                            </option>
+
+                            <option value="BE">
+                                Final Year (BE)
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Semester -->
+
+                    <div class="allocation-filter-group">
+
+                        <label for="semester">
+                            Semester
+                        </label>
+
+                        <select id="semester">
+
+                            <option value="">
+                                Select Semester
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Division -->
+
+                    <div class="allocation-filter-group">
+
+                        <label for="division">
+                            Division
+                        </label>
+
+                        <select id="division">
+
+                            <option value="">
+                                Select Division
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABLE PANEL
+                     ================================================= -->
+
+                <div class="allocation-table-panel">
+
+
+                    <div class="allocation-table-header">
+
+                        <div>
+
+                            <h3>
+                                Subject & Teacher Allocation
+                            </h3>
+
+                            <p>
+                                Assign one approved teacher to each
+                                subject for the selected class.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="allocation-table-wrapper"
+                        id="allocationTableWrapper"
+                    >
+
+                        <div
+                            class="allocation-empty-state"
+                            id="allocationEmptyState"
+                        >
+
+                            Select academic year, semester and
+                            division to view subjects.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         ASSIGN TEACHER MODAL
+         ===================================================== -->
+
+    <div
+        class="allocation-modal-overlay"
+        id="allocationModal"
+    >
+
+        <div class="allocation-modal">
+
+
+            <div class="allocation-modal-header">
+
+                <div>
+
+                    <h3>
+                        Assign Teacher
+                    </h3>
+
+                    <p>
+                        Assign an approved teaching staff member
+                        to this subject.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="allocation-modal-close"
+                    id="closeAllocationModal"
+                    type="button"
+                >
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <div class="allocation-modal-body">
+
+
+                <!-- Subject -->
+
+                <div class="allocation-modal-group">
+
+                    <label>
+                        Subject
+                    </label>
+
+                    <div
+                        class="allocation-subject-preview"
+                        id="modalSubjectName"
+                    >
+                        -
+                    </div>
+
+                </div>
+
+
+                <!-- Teacher -->
+
+                <div class="allocation-modal-group">
+
+                    <label for="teacherSelect">
+                        Teacher
+                    </label>
+
+                    <select id="teacherSelect">
+
+                        <option value="">
+                            Select Teacher
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="allocation-modal-footer">
+
+                <button
+                    type="button"
+                    class="allocation-cancel-button"
+                    id="cancelAllocation"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="button"
+                    class="allocation-save-button"
+                    id="saveAllocation"
+                >
+                    Assign Teacher
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        class="allocation-toast"
+        id="allocationToast"
+    ></div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="src/JS/subject-allocation.js"></script>
+
+</body>
+
+</html>

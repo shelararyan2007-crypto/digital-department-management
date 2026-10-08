@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        HOD Dashboard - Atma Malik Institute
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+         ===================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="src/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Topbar.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <div class="dashboard-page">
+
+
+        <!-- =================================================
+             BACKGROUND
+             ================================================= -->
+
+        <div class="dashboard-background"></div>
+
+        <div class="dashboard-background-overlay"></div>
+
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+                    AM
+                </div>
+
+
+                <div class="sidebar-title">
+
+                    <h2>
+                        Department
+                    </h2>
+
+                    <span>
+                        Management Portal
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <button
+                    type="button"
+                    class="sidebar-item active"
+                    data-section="dashboard"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="teachers"
+                >
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                    <span>
+                        Teachers
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="students"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        Students
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="subjects"
+                >
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>
+                        Subjects
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="timetable"
+                >
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        Timetable
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="attendance"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>
+                        Attendance
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="tasks"
+                >
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <span>
+                        Tasks
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="events"
+                >
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        Events
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="announcements"
+                >
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                    <span>
+                        Announcements
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="analytics"
+                >
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>
+                        Analytics
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="reports"
+                >
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>
+                        Reports
+                    </span>
+
+                </button>
+
+
+            </nav>
+
+
+
+            <!-- Sidebar Footer -->
+
+            <div class="sidebar-footer">
+
+                <button type="button" class="logout-btn" id="logoutBtn">
+    <i class="fas fa-sign-out-alt"></i>
+    <span>Logout</span>
+</button>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN AREA
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+
+                <!-- Left -->
+
+                <div class="topbar-left">
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p id="topbarDepartment">
+                        Department
+                    </p>
+
+                </div>
+
+
+
+                <!-- Right -->
+
+                <div class="topbar-right">
+
+
+                    <!-- Notification -->
+
+                    <button
+                        type="button"
+                        class="notification-button"
+                        id="notificationButton"
+                        aria-label="Notifications"
+                    >
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span
+                            class="notification-dot"
+                            id="notificationCount"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- Profile -->
+
+                    <button
+                        type="button"
+                        class="profile-button"
+                        id="profileButton"
+                    >
+
+                        <div class="profile-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="profile-info">
+
+                            <strong id="profileName">
+                                HOD
+                            </strong>
+
+                            <span>
+                                Head of Department
+                            </span>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down profile-arrow"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 DASHBOARD CONTENT
+                 ================================================= -->
+
+            <section class="dashboard-content">
+
+                <!-- =================================================
+                     WELCOME SECTION
+                     ================================================= -->
+
+                <div class="welcome-section">
+
+
+                    <div>
+
+                        <div class="welcome-label">
+
+                            <i class="fa-solid fa-sun"></i>
+
+                            <span>
+                                Department Overview
+                            </span>
+
+                        </div>
+
+
+                        <h2 id="welcomeHeading">
+                            Welcome back
+                        </h2>
+
+
+                        <p id="welcomeText">
+                            Here's what's happening in your department today.
+                        </p>
+
+                    </div>
+
+
+
+                    <div
+                        class="department-badge"
+                        id="departmentBadge"
+                    >
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                        <span>
+                            Loading department...
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     STAT CARDS
+                     ================================================= -->
+
+                <div class="stats-grid">
+
+
+                    <!-- Teachers -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon teachers-icon">
+
+                            <i class="fa-solid fa-chalkboard-user"></i>
+
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span class="stat-label">
+                                Total Teachers
+                            </span>
+
+                            <strong
+                                class="stat-value"
+                                id="totalTeachers"
+                            >
+                                0
+                            </strong>
+
+                            <span class="stat-subtext">
+                                Approved teaching staff
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Students -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon students-icon">
+
+                            <i class="fa-solid fa-user-graduate"></i>
+
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span class="stat-label">
+                                Total Students
+                            </span>
+
+                            <strong
+                                class="stat-value"
+                                id="totalStudents"
+                            >
+                                0
+                            </strong>
+
+                            <span class="stat-subtext">
+                                Registered students
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Pending -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon pending-icon">
+
+                            <i class="fa-solid fa-user-clock"></i>
+
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span class="stat-label">
+                                Pending Requests
+                            </span>
+
+                            <strong
+                                class="stat-value"
+                                id="pendingRequests"
+                            >
+                                0
+                            </strong>
+
+                            <span class="stat-subtext">
+                                Teacher approvals
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Attendance -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon attendance-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span class="stat-label">
+                                Today's Attendance
+                            </span>
+
+                            <strong
+                                class="stat-value"
+                                id="todaysAttendance"
+                            >
+                                0%
+                            </strong>
+
+                            <span class="stat-subtext">
+                                Department attendance
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     LOWER GRID
+                     ================================================= -->
+
+                <div class="dashboard-panels">
+
+<!-- =================================================
+     PENDING TEACHER REQUESTS
+     ================================================= -->
+
+<div class="dashboard-panel pending-requests-panel">
+
+    <div class="panel-header">
+
+        <div>
+            <h3>
+                Pending Teacher Requests
+            </h3>
+
+            <p>
+                Review teaching staff registrations
+            </p>
+        </div>
+
+        <span
+            class="pending-count-badge"
+            id="pendingRequestBadge">
+            0
+        </span>
+
+    </div>
+
+
+    <div
+        class="pending-requests-list"
+        id="pendingRequestsList">
+
+        <div class="pending-empty-state">
+
+            <i class="fa-solid fa-user-clock"></i>
+
+            <span>
+                Loading pending requests...
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+                    <!-- =================================================
+                         RECENT ACTIVITY
+                         ================================================= -->
+
+                    <div class="dashboard-panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+
+                                <p>
+                                    Latest department updates
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="panel-action"
+                                data-section="analytics"
+                            >
+                                View All
+                            </button>
+
+                        </div>
+
+
+
+                        <div
+                            class="activity-list"
+                            id="activityList"
+                        >
+
+
+                            <!-- Activity 1 -->
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon blue">
+
+                                    <i class="fa-solid fa-user-plus"></i>
+
+                                </div>
+
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        Department dashboard initialized
+                                    </strong>
+
+                                    <span>
+                                        Department data loaded successfully
+                                    </span>
+
+                                </div>
+
+
+                                <span class="activity-time">
+                                    Today
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- Activity 2 -->
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon green">
+
+                                    <i class="fa-solid fa-database"></i>
+
+                                </div>
+
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        Academic data synchronized
+                                    </strong>
+
+                                    <span>
+                                        Student and teacher records are available
+                                    </span>
+
+                                </div>
+
+
+                                <span class="activity-time">
+                                    Today
+                                </span>
+
+                            </div>
+
+
+
+                            <!-- Activity 3 -->
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon orange">
+
+                                    <i class="fa-solid fa-clock"></i>
+
+                                </div>
+
+
+                                <div class="activity-content">
+
+                                    <strong>
+                                        Attendance monitoring
+                                    </strong>
+
+                                    <span>
+                                        Today's attendance data is being tracked
+                                    </span>
+
+                                </div>
+
+
+                                <span class="activity-time">
+                                    Today
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         UPCOMING EVENTS
+                         ================================================= -->
+
+                    <div class="dashboard-panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h3>
+                                    Upcoming Events
+                                </h3>
+
+                                <p>
+                                    Department schedule
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="panel-action"
+                                data-section="events"
+                            >
+                                View All
+                            </button>
+
+                        </div>
+
+
+
+                        <div
+                            class="events-list"
+                            id="eventsList"
+                        >
+
+
+                            <!-- Event -->
+
+                            <div class="event-item">
+
+                                <div class="event-date">
+
+                                    <strong>
+                                        12
+                                    </strong>
+
+                                    <span>
+                                        OCT
+                                    </span>
+
+                                </div>
+
+
+                                <div class="event-content">
+
+                                    <strong>
+                                        Department Activity
+                                    </strong>
+
+                                    <span>
+                                        Academic department event
+                                    </span>
+
+                                </div>
+
+
+                                <i class="fa-solid fa-chevron-right event-arrow"></i>
+
+                            </div>
+
+
+
+                            <!-- Event -->
+
+                            <div class="event-item">
+
+                                <div class="event-date">
+
+                                    <strong>
+                                        18
+                                    </strong>
+
+                                    <span>
+                                        OCT
+                                    </span>
+
+                                </div>
+
+
+                                <div class="event-content">
+
+                                    <strong>
+                                        Academic Review
+                                    </strong>
+
+                                    <span>
+                                        Department academic review meeting
+                                    </span>
+
+                                </div>
+
+
+                                <i class="fa-solid fa-chevron-right event-arrow"></i>
+
+                            </div>
+
+
+
+                            <!-- Event -->
+
+                            <div class="event-item">
+
+                                <div class="event-date">
+
+                                    <strong>
+                                        25
+                                    </strong>
+
+                                    <span>
+                                        OCT
+                                    </span>
+
+                                </div>
+
+
+                                <div class="event-content">
+
+                                    <strong>
+                                        Faculty Meeting
+                                    </strong>
+
+                                    <span>
+                                        Department faculty coordination
+                                    </span>
+
+                                </div>
+
+
+                                <i class="fa-solid fa-chevron-right event-arrow"></i>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     QUICK ACTIONS
+                     ================================================= -->
+
+                <div class="quick-actions-panel">
+
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Quick Actions
+                            </h3>
+
+                            <p>
+                                Frequently used department operations
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="quick-actions-grid">
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="teachers"
+                        >
+
+                            <i class="fa-solid fa-user-check"></i>
+
+                            <span>
+                                Manage Teachers
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="students"
+                        >
+
+                            <i class="fa-solid fa-user-graduate"></i>
+
+                            <span>
+                                View Students
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="subjects"
+                        >
+
+                            <i class="fa-solid fa-book"></i>
+
+                            <span>
+                                Manage Subjects
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="quick-action"
+                            data-section="attendance"
+                        >
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            <span>
+                                Attendance
+                            </span>
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        class="dashboard-toast-container"
+        id="dashboardToastContainer"
+    >
+
+        <div
+            class="dashboard-toast"
+            id="dashboardToast"
+        >
+
+            <div
+                class="dashboard-toast-icon"
+                id="dashboardToastIcon"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <div class="dashboard-toast-content">
+
+                <strong id="dashboardToastTitle">
+                    Success
+                </strong>
+
+                <span id="dashboardToastMessage">
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="dashboard-toast-close"
+                id="dashboardToastClose"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         DASHBOARD JAVASCRIPT
+         ===================================================== -->
+
+    <script src="src/JS/hod-dashboard.js"></script>
+
+</body>
+
+</html>

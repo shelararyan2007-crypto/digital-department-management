@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Teachers - Atma Malik Institute
+    </title>
+
+
+    <!-- =================================================
+         GOOGLE FONT
+         ================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =================================================
+         FONT AWESOME
+         ================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =================================================
+         EXISTING DASHBOARD CSS
+         ================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="src/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Topbar.css"
+    >
+
+
+    <!-- =================================================
+         TEACHERS CSS
+         ================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="src/css/teachers.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/teacher-modal.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard-page">
+
+
+        <!-- =================================================
+             BACKGROUND
+             ================================================= -->
+
+        <div class="dashboard-background"></div>
+
+        <div class="dashboard-background-overlay"></div>
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Sidebar Header -->
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+                    AM
+                </div>
+
+
+                <div class="sidebar-title">
+
+                    <h2>
+                        Department
+                    </h2>
+
+                    <span>
+                        Management Portal
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <!-- Dashboard -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="dashboard"
+                >
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </button>
+
+
+                <!-- Teachers -->
+
+                <button
+                    type="button"
+                    class="sidebar-item active"
+                    data-section="teachers"
+                >
+
+                    <i class="fa-solid fa-chalkboard-user"></i>
+
+                    <span>
+                        Teachers
+                    </span>
+
+                </button>
+
+
+                <!-- Students -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="students"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>
+                        Students
+                    </span>
+
+                </button>
+
+
+                <!-- Subjects -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="subjects"
+                >
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>
+                        Subjects
+                    </span>
+
+                </button>
+
+<button
+    class="sidebar-item"
+    data-section="subject-allocation"
+>
+    <span>Subject Allocation</span>
+</button>
+                <!-- Timetable -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="timetable"
+                >
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <span>
+                        Timetable
+                    </span>
+
+                </button>
+
+
+                <!-- Attendance -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="attendance"
+                >
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>
+                        Attendance
+                    </span>
+
+                </button>
+
+
+                <!-- Tasks -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="tasks"
+                >
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <span>
+                        Tasks
+                    </span>
+
+                </button>
+
+
+                <!-- Events -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="events"
+                >
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        Events
+                    </span>
+
+                </button>
+
+
+                <!-- Announcements -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="announcements"
+                >
+
+                    <i class="fa-solid fa-bullhorn"></i>
+
+                    <span>
+                        Announcements
+                    </span>
+
+                </button>
+
+
+                <!-- Analytics -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="analytics"
+                >
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>
+                        Analytics
+                    </span>
+
+                </button>
+
+
+                <!-- Reports -->
+
+                <button
+                    type="button"
+                    class="sidebar-item"
+                    data-section="reports"
+                >
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>
+                        Reports
+                    </span>
+
+                </button>
+
+            </nav>
+
+
+            <!-- Sidebar Footer -->
+
+            <div class="sidebar-footer">
+
+                <button
+                    type="button"
+                    class="logout-btn"
+                    id="logoutBtn"
+                >
+
+                    <i class="fas fa-sign-out-alt"></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN AREA
+             ================================================= -->
+
+        <main class="dashboard-main">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+
+                <div class="topbar-left">
+
+                    <h1>
+                        Teachers
+                    </h1>
+
+                    <p id="topbarDepartment">
+                        Department
+                    </p>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- Notification -->
+
+                    <button
+                        type="button"
+                        class="notification-button"
+                        id="notificationButton"
+                        aria-label="Notifications"
+                    >
+
+                        <i class="fa-solid fa-bell"></i>
+
+                        <span
+                            class="notification-dot"
+                            id="notificationCount"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <!-- Profile -->
+
+                    <button
+                        type="button"
+                        class="profile-button"
+                        id="profileButton"
+                    >
+
+                        <div class="profile-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="profile-info">
+
+                            <strong id="profileName">
+                                HOD
+                            </strong>
+
+                            <span>
+                                Head of Department
+                            </span>
+
+                        </div>
+
+
+                        <i
+                            class="fa-solid fa-chevron-down profile-arrow"
+                        ></i>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 TEACHERS CONTENT
+                 ================================================= -->
+
+            <section class="teachers-page-content">
+
+
+                <!-- =================================================
+                     PAGE HEADER
+                     ================================================= -->
+
+                <div class="teachers-page-header">
+
+
+                    <div>
+
+                        <div class="teachers-page-label">
+
+                            <i class="fa-solid fa-chalkboard-user"></i>
+
+                            <span>
+                                Faculty Management
+                            </span>
+
+                        </div>
+
+
+                        <h2>
+                            Teaching Staff
+                        </h2>
+
+
+                        <p>
+                            Manage teachers associated with your department.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="teachers-department-badge"
+                        id="teachersDepartmentName"
+                    >
+
+                        <i class="fa-solid fa-building-columns"></i>
+
+                        <span>
+                            Loading department...
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TEACHER SUMMARY CARDS
+                     ================================================= -->
+
+                <div class="teacher-summary-grid">
+
+
+                    <!-- Approved -->
+
+                    <button
+                        type="button"
+                        class="teacher-summary-card approved active"
+                        data-teacher-status="APPROVED"
+                    >
+
+                        <div class="teacher-summary-icon">
+
+                            <i class="fa-solid fa-user-check"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Approved Teachers
+                            </span>
+
+                            <strong id="approvedTeacherCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- Pending -->
+
+                    <button
+                        type="button"
+                        class="teacher-summary-card pending"
+                        data-teacher-status="PENDING"
+                    >
+
+                        <div class="teacher-summary-icon">
+
+                            <i class="fa-solid fa-user-clock"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Pending Requests
+                            </span>
+
+                            <strong id="pendingTeacherCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- Rejected -->
+
+                    <button
+                        type="button"
+                        class="teacher-summary-card rejected"
+                        data-teacher-status="REJECTED"
+                    >
+
+                        <div class="teacher-summary-icon">
+
+                            <i class="fa-solid fa-user-xmark"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Rejected Teachers
+                            </span>
+
+                            <strong id="rejectedTeacherCount">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     TEACHERS TABLE PANEL
+                     ================================================= -->
+
+                <div class="teachers-table-panel">
+
+
+                    <div class="teachers-table-header">
+
+
+                        <div>
+
+                            <h3 id="teacherListTitle">
+                                Approved Teachers
+                            </h3>
+
+                            <p id="teacherListSubtitle">
+                                Currently approved teaching staff
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="teachers-refresh-button"
+                            id="refreshTeachersBtn"
+                        >
+
+                            <i class="fa-solid fa-rotate"></i>
+
+                            Refresh
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- TABLE -->
+
+                    <div
+                        class="teachers-table-wrapper"
+                        id="teachersTableWrapper"
+                    >
+
+                        <div class="teachers-loading">
+
+                            <i class="fa-solid fa-spinner fa-spin"></i>
+
+                            <span>
+                                Loading teachers...
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =================================================
+         TEACHER MODAL
+         ================================================= -->
+
+    <div
+        class="teacher-modal-overlay"
+        id="teacherModalOverlay"
+        aria-hidden="true"
+    >
+
+        <div
+            class="teacher-modal"
+            id="teacherModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="teacherModalTitle"
+        >
+
+
+            <!-- Modal Header -->
+
+            <div class="teacher-modal-header">
+
+                <div class="teacher-modal-heading">
+
+
+                    <div
+                        class="teacher-modal-avatar"
+                        id="teacherModalAvatar"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span
+                            class="teacher-modal-eyebrow"
+                            id="teacherModalEyebrow"
+                        >
+                            Teacher Profile
+                        </span>
+
+
+                        <h3 id="teacherModalTitle">
+                            Teacher Details
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="teacher-modal-close"
+                    id="teacherModalClose"
+                    aria-label="Close"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Modal Body -->
+
+            <div
+                class="teacher-modal-body"
+                id="teacherModalBody"
+            >
+
+            </div>
+
+
+            <!-- Modal Footer -->
+
+            <div
+                class="teacher-modal-footer"
+                id="teacherModalFooter"
+            >
+
+                <button
+                    type="button"
+                    class="teacher-modal-secondary"
+                    id="teacherModalCancel"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         TOAST
+         ================================================= -->
+
+    <div
+        class="dashboard-toast-container"
+        id="dashboardToastContainer"
+    >
+
+        <div
+            class="dashboard-toast"
+            id="dashboardToast"
+        >
+
+            <div
+                class="dashboard-toast-icon"
+                id="dashboardToastIcon"
+            >
+
+                <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+
+            <div class="dashboard-toast-content">
+
+                <strong id="dashboardToastTitle">
+                    Success
+                </strong>
+
+                <span id="dashboardToastMessage">
+                </span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="dashboard-toast-close"
+                id="dashboardToastClose"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         JAVASCRIPT
+         ================================================= -->
+<script src="src/JS/teachers.js"></script>
+
+<script src="src/JS/teacher-modal.js"></script>
+
+
+</body>
+
+</html>

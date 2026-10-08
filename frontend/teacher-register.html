@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Registration - Atma Malik Institute</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="src/css/TeacherRegister.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div
+        id="toastContainer"
+        class="toast-container">
+    </div>
+
+    <main class="registration-page">
+
+        <section class="registration-card">
+
+            <!-- LOGO -->
+            <div class="college-logo">
+
+                <img
+                    src="src/assets/logo.jpg"
+                    alt="Atma Malik Institute Logo">
+
+            </div>
+
+
+            <!-- COLLEGE NAME -->
+            <div class="college-name">
+
+                <h1>ATMA MALIK INSTITUTE</h1>
+
+                <p>OF TECHNOLOGY AND RESEARCH</p>
+
+            </div>
+
+
+            <!-- HEADING -->
+            <div class="registration-heading">
+
+                <h2>Teacher Registration</h2>
+
+                <p>
+                    Create your teaching staff account
+                </p>
+
+            </div>
+
+
+            <!-- REGISTRATION FORM -->
+            <form
+                id="teacherRegistrationForm"
+                novalidate>
+
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Full Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-regular fa-user input-icon">
+                        </i>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name">
+
+                    </div>
+
+                </div>
+
+
+                <!-- FACULTY ID -->
+                <div class="form-group">
+
+                    <label for="username">
+                        Faculty ID
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-solid fa-id-card input-icon">
+                        </i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your Faculty ID"
+                            autocomplete="username">
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMAIL -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-regular fa-envelope input-icon">
+                        </i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email">
+
+                    </div>
+
+                </div>
+
+
+                <!-- MOBILE -->
+                <div class="form-group">
+
+                    <label for="mobile">
+                        Mobile Number
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-solid fa-phone input-icon">
+                        </i>
+
+                        <input
+                            type="tel"
+                            id="mobile"
+                            name="mobile"
+                            placeholder="Enter your mobile number"
+                            maxlength="10"
+                            inputmode="numeric"
+                            autocomplete="tel">
+
+                    </div>
+
+                </div>
+
+
+                <!-- DATE OF BIRTH -->
+                <div class="form-group">
+
+                    <label>
+                        Date of Birth
+                    </label>
+
+                    <div class="dob-row">
+
+                        <!-- DAY -->
+                        <select
+                            id="dobDay"
+                            name="dobDay">
+
+                            <option value="">
+                                Day
+                            </option>
+
+                        </select>
+
+
+                        <!-- MONTH -->
+                        <select
+                            id="dobMonth"
+                            name="dobMonth">
+
+                            <option value="">
+                                Month
+                            </option>
+
+                            <option value="1">
+                                January
+                            </option>
+
+                            <option value="2">
+                                February
+                            </option>
+
+                            <option value="3">
+                                March
+                            </option>
+
+                            <option value="4">
+                                April
+                            </option>
+
+                            <option value="5">
+                                May
+                            </option>
+
+                            <option value="6">
+                                June
+                            </option>
+
+                            <option value="7">
+                                July
+                            </option>
+
+                            <option value="8">
+                                August
+                            </option>
+
+                            <option value="9">
+                                September
+                            </option>
+
+                            <option value="10">
+                                October
+                            </option>
+
+                            <option value="11">
+                                November
+                            </option>
+
+                            <option value="12">
+                                December
+                            </option>
+
+                        </select>
+
+
+                        <!-- YEAR -->
+                        <select
+                            id="dobYear"
+                            name="dobYear">
+
+                            <option value="">
+                                Year
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GENDER -->
+                <div class="form-group">
+
+                    <label for="gender">
+                        Gender
+                    </label>
+
+                    <select
+                        id="gender"
+                        name="gender">
+
+                        <option value="">
+                            Select gender
+                        </option>
+
+                        <option value="MALE">
+                            Male
+                        </option>
+
+                        <option value="FEMALE">
+                            Female
+                        </option>
+
+                        <option value="OTHER">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DEPARTMENT -->
+                <div class="form-group">
+
+                    <label for="department">
+                        Department
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-solid fa-building-columns input-icon">
+                        </i>
+
+                        <select
+                            id="department"
+                            name="department">
+
+                            <option value="">
+                                Select your department
+                            </option>
+
+                            <option value="1">
+                                Computer Engineering
+                            </option>
+
+                            <option value="2">
+                                Artificial Intelligence and Machine Learning
+                            </option>
+
+                            <option value="3">
+                                Cyber Security and IoT
+                            </option>
+
+                            <option value="4">
+                                Mechanical Engineering
+                            </option>
+
+                            <option value="5">
+                                Electronics and Telecommunication Engineering
+                            </option>
+
+                            <option value="6">
+                                Civil Engineering
+                            </option>
+
+                            <option value="7">
+                                Department of Engineering Sciences and Humanities
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-solid fa-lock input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password">
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                            aria-label="Show password">
+
+                            <i
+                                id="passwordIcon"
+                                class="fa-regular fa-eye">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+                <div class="form-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-solid fa-lock input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password">
+
+                        <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="password-toggle"
+                            aria-label="Show password">
+
+                            <i
+                                id="confirmPasswordIcon"
+                                class="fa-regular fa-eye">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REGISTER BUTTON -->
+                <button
+                    type="submit"
+                    id="registerButton"
+                    class="register-button">
+
+                    <span id="registerButtonText">
+                        REGISTER
+                    </span>
+
+                </button>
+
+            </form>
+
+
+            <!-- BACK TO LOGIN -->
+            <div class="back-to-login">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <button
+                    type="button"
+                    id="backToLogin">
+
+                    Back to Login
+
+                </button>
+
+            </div>
+
+
+            <!-- FOOTER -->
+            <div class="registration-footer">
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure College Portal
+                </span>
+
+                <span>
+                    © 2026
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="src/JS/teacher-register.js"></script>
+
+</body>
+
+</html>

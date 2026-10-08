@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atma Malik Institute - Department Portal</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link
+        rel="stylesheet"
+        href="src/css/Login.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div
+        id="toastContainer"
+        class="toast-container">
+    </div>
+
+    <main class="login-page">
+
+        <section class="login-card">
+
+            <!-- College Logo -->
+            <div class="college-logo">
+                <img
+                    src="src/assets/logo.jpg"
+                    alt="Atma Malik Institute Logo">
+            </div>
+
+            <!-- College Name -->
+            <div class="college-name">
+                <h1>ATMA MALIK INSTITUTE</h1>
+                <p>OF TECHNOLOGY AND RESEARCH</p>
+            </div>
+
+            <!-- Welcome -->
+            <div class="welcome-section">
+                <h2>Welcome Back</h2>
+                <p>Select your account type to continue</p>
+            </div>
+
+            <!-- Account Types -->
+            <div class="account-types">
+
+                <button
+                    type="button"
+                    class="account-type active"
+                    data-role="HOD">
+
+                    <strong>HOD</strong>
+                    <span>Department Head</span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="account-type"
+                    data-role="TEACHING_STAFF">
+
+                    <strong>Teacher</strong>
+                    <span>Teaching Staff</span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="account-type"
+                    data-role="STUDENT">
+
+                    <strong>Student</strong>
+                    <span>Student Portal</span>
+
+                </button>
+
+            </div>
+
+            <!-- Login Form -->
+            <form
+                id="loginForm"
+                novalidate>
+
+                <!-- Username -->
+                <div class="form-group">
+
+                    <label
+                        for="username"
+                        id="usernameLabel">
+                        Username
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-regular fa-user input-icon">
+                        </i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Enter your username"
+                            autocomplete="username">
+
+                    </div>
+
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i
+                            class="fa-solid fa-lock input-icon">
+                        </i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password">
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="password-toggle"
+                            aria-label="Show password">
+
+                            <i
+                                id="passwordIcon"
+                                class="fa-regular fa-eye">
+                            </i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Login Button -->
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="login-button">
+
+                    <span id="loginButtonText">
+                        LOGIN
+                    </span>
+
+                </button>
+
+                        </form>
+
+            <!-- Teacher Registration -->
+            <div
+                id="teacherRegistration"
+                class="teacher-registration">
+
+                <span>New Teacher?</span>
+
+                <button
+                    type="button"
+                    id="registerTeacherButton">
+                    Register as Teacher
+                </button>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="login-footer">
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure College Portal
+                </span>
+
+                <span>
+                    © 2026
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="src/JS/login.js"></script>
+
+</body>
+
+</html>

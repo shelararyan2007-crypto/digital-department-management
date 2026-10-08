@@ -1,0 +1,888 @@
+/* =========================================================
+   SUBJECT ALLOCATION
+   Matches Dashboard / Teachers / Subjects visual system
+   ========================================================= */
+
+
+/* =========================================================
+   MAIN CONTENT LAYER
+   ========================================================= */
+
+.main-content {
+    position: relative;
+    z-index: 2;
+
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   PAGE CONTENT
+   ========================================================= */
+
+.allocation-content {
+    position: relative;
+    z-index: 2;
+
+    padding: 28px 32px 40px;
+
+    /*
+     * IMPORTANT:
+     * Keep this transparent so the college background
+     * from dashboard.css remains visible.
+     */
+    background: transparent;
+
+    min-height: calc(100vh - 72px);
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.allocation-page-header {
+    margin-bottom: 24px;
+}
+
+.allocation-title-row {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.allocation-page-header h2 {
+    margin: 0;
+
+    color: #173657;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.allocation-page-header p {
+    margin: 7px 0 0;
+
+    color: #70839a;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   DEPARTMENT BADGE
+   ========================================================= */
+
+.allocation-department-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    background: rgba(139, 61, 255, 0.10);
+
+    border: 1px solid rgba(139, 61, 255, 0.08);
+
+    color: #7c3aed;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FILTER PANEL
+   ========================================================= */
+
+.allocation-filter-panel {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 18px;
+
+    padding: 24px;
+
+    margin-bottom: 22px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 22px
+        rgba(37, 72, 110, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   FILTER GROUP
+   ========================================================= */
+
+.allocation-filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    min-width: 195px;
+}
+
+.allocation-filter-group label {
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.allocation-filter-group select {
+    width: 100%;
+
+    height: 42px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d9deea;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    color: #243047;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.allocation-filter-group select:focus {
+    border-color: #8b3dff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139, 61, 255, 0.12);
+}
+
+
+/* =========================================================
+   TABLE PANEL
+   ========================================================= */
+
+.allocation-table-panel {
+    position: relative;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 6px 22px
+        rgba(37, 72, 110, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+   ========================================================= */
+
+.allocation-table-header {
+    padding: 22px 22px 18px;
+
+    border-bottom: 1px solid
+        rgba(225, 230, 238, 0.9);
+}
+
+.allocation-table-header h3 {
+    margin: 0;
+
+    color: #173657;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.allocation-table-header p {
+    margin: 6px 0 0;
+
+    color: #70839a;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+   ========================================================= */
+
+.allocation-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.allocation-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+}
+
+.allocation-table th {
+    padding: 14px 18px;
+
+    background: rgba(248, 250, 253, 0.92);
+
+    border-bottom: 1px solid #e8ebf2;
+
+    color: #5b6577;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.allocation-table td {
+    padding: 16px 18px;
+
+    border-bottom: 1px solid #edf0f5;
+
+    color: #273247;
+
+    font-size: 15px;
+
+    vertical-align: middle;
+}
+
+.allocation-table tr:last-child td {
+    border-bottom: none;
+}
+
+.allocation-table tr:hover td {
+    background: rgba(250, 251, 255, 0.90);
+}
+
+
+/* =========================================================
+   SUBJECT
+   ========================================================= */
+
+.allocation-subject-name {
+    color: #173657;
+
+    font-weight: 600;
+}
+
+.allocation-subject-code {
+    display: inline-block;
+
+    margin-top: 4px;
+
+    color: #7b8495;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TEACHER
+   ========================================================= */
+
+.allocation-teacher-name {
+    color: #303b50;
+
+    font-weight: 600;
+}
+
+.allocation-not-assigned {
+    color: #9aa3b2;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.allocation-status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.allocation-status-badge.assigned {
+    background: #e9f8ef;
+
+    color: #16834a;
+}
+
+.allocation-status-badge.not-assigned {
+    background: #f1f3f6;
+
+    color: #7b8495;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.allocation-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.allocation-action-button {
+    height: 34px;
+
+    padding: 0 12px;
+
+    border-radius: 7px;
+
+    border: 1px solid transparent;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.allocation-action-button:hover {
+    transform: translateY(-1px);
+}
+
+.allocation-assign-button {
+    background: #8b3dff;
+
+    color: #ffffff;
+}
+
+.allocation-assign-button:hover {
+    background: #7730df;
+}
+
+.allocation-change-button {
+    background: #f2eaff;
+
+    color: #7c3aed;
+}
+
+.allocation-change-button:hover {
+    background: #e8dbff;
+}
+
+.allocation-remove-button {
+    background: #fff1f1;
+
+    color: #dc2626;
+}
+
+.allocation-remove-button:hover {
+    background: #ffe4e4;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.allocation-empty-state {
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    color: #8993a4;
+
+    text-align: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.allocation-loading {
+    min-height: 210px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #8993a4;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.allocation-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.45);
+
+    z-index: 2000;
+}
+
+.allocation-modal-overlay.show {
+    display: flex;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.allocation-modal {
+    width: 100%;
+
+    max-width: 500px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(15, 23, 42, 0.20);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.allocation-modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.allocation-modal-header h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+.allocation-modal-header p {
+    margin: 6px 0 0;
+
+    color: #718096;
+
+    font-size: 14px;
+}
+
+.allocation-modal-close {
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f4f5f8;
+
+    color: #5d6675;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.allocation-modal-close:hover {
+    background: #e9ebef;
+}
+
+
+/* =========================================================
+   MODAL BODY
+   ========================================================= */
+
+.allocation-modal-body {
+    padding: 22px;
+}
+
+.allocation-modal-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+.allocation-modal-group:last-child {
+    margin-bottom: 0;
+}
+
+.allocation-modal-group label {
+    color: #374151;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.allocation-subject-preview {
+    padding: 12px 14px;
+
+    border: 1px solid #e1e5ed;
+
+    border-radius: 8px;
+
+    background: #f8f9fc;
+
+    color: #273247;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+.allocation-modal-group select {
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d9deea;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #243047;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.allocation-modal-group select:focus {
+    border-color: #8b3dff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(139, 61, 255, 0.12);
+}
+
+
+/* =========================================================
+   MODAL FOOTER
+   ========================================================= */
+
+.allocation-modal-footer {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding: 18px 22px;
+
+    border-top: 1px solid #edf0f5;
+}
+
+.allocation-cancel-button,
+.allocation-save-button {
+    height: 40px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.allocation-cancel-button {
+    border: 1px solid #dfe3ea;
+
+    background: #ffffff;
+
+    color: #566174;
+}
+
+.allocation-cancel-button:hover {
+    background: #f7f8fa;
+}
+
+.allocation-save-button {
+    border: 1px solid #8b3dff;
+
+    background: #8b3dff;
+
+    color: #ffffff;
+}
+
+.allocation-save-button:hover {
+    background: #7730df;
+}
+
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+
+.allocation-toast {
+    position: fixed;
+
+    right: 24px;
+
+    bottom: 24px;
+
+    max-width: 360px;
+
+    padding: 13px 17px;
+
+    border-radius: 9px;
+
+    background: #202938;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.20);
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+    z-index: 3000;
+}
+
+.allocation-toast.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.allocation-toast.success {
+    background: #16834a;
+}
+
+.allocation-toast.error {
+    background: #dc2626;
+}
+
+.allocation-toast.info {
+    background: #4f46e5;
+}
+
+
+/* =========================================================
+   SIDEBAR ICON ALIGNMENT
+   ========================================================= */
+
+.sidebar-item i {
+    width: 20px;
+
+    text-align: center;
+
+    flex-shrink: 0;
+}
+
+.sidebar-logout {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.sidebar-logout i {
+    width: 18px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .main-content {
+        margin-left: 250px;
+    }
+
+    .allocation-filter-panel {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .allocation-filter-group {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .allocation-content {
+        padding: 20px;
+    }
+
+    .allocation-page-header h2 {
+        font-size: 22px;
+    }
+
+    .allocation-table th,
+    .allocation-table td {
+        padding: 12px;
+    }
+
+    .allocation-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}

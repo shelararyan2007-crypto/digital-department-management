@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Subjects - Atma Malik Institute</title>
+
+
+    <!-- GOOGLE FONT -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- FONT AWESOME -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- EXISTING DASHBOARD CSS -->
+    <link
+        rel="stylesheet"
+        href="src/css/dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="src/css/Topbar.css"
+    >
+
+
+    <!-- SUBJECTS CSS -->
+    <link
+        rel="stylesheet"
+        href="src/css/subjects.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="dashboard-page">
+
+
+    <!-- =================================================
+         BACKGROUND
+         ================================================= -->
+
+    <div class="dashboard-background"></div>
+
+    <div class="dashboard-background-overlay"></div>
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside class="sidebar">
+
+
+        <!-- Sidebar Header -->
+
+        <div class="sidebar-header">
+
+            <div class="sidebar-logo">
+                AM
+            </div>
+
+            <div class="sidebar-title">
+
+                <h2>
+                    Department
+                </h2>
+
+                <span>
+                    Management Portal
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <!-- Dashboard -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="dashboard"
+            >
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <!-- Teachers -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="teachers"
+            >
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                <span>
+                    Teachers
+                </span>
+
+            </button>
+
+
+            <!-- Students -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="students"
+            >
+
+                <i class="fa-solid fa-users"></i>
+
+                <span>
+                    Students
+                </span>
+
+            </button>
+
+
+            <!-- Subjects -->
+
+            <button
+                type="button"
+                class="sidebar-item active"
+                data-section="subjects"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>
+                    Subjects
+                </span>
+
+            </button>
+<button
+    class="sidebar-item"
+    data-section="subject-allocation"
+>
+    <span>Subject Allocation</span>
+</button>
+
+            <!-- Timetable -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="timetable"
+            >
+
+                <i class="fa-solid fa-clock"></i>
+
+                <span>
+                    Timetable
+                </span>
+
+            </button>
+
+
+            <!-- Attendance -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="attendance"
+            >
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Attendance
+                </span>
+
+            </button>
+
+
+            <!-- Tasks -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="tasks"
+            >
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <span>
+                    Tasks
+                </span>
+
+            </button>
+
+
+            <!-- Events -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="events"
+            >
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>
+                    Events
+                </span>
+
+            </button>
+
+
+            <!-- Announcements -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="announcements"
+            >
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                <span>
+                    Announcements
+                </span>
+
+            </button>
+
+
+            <!-- Analytics -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="analytics"
+            >
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>
+                    Analytics
+                </span>
+
+            </button>
+
+
+            <!-- Reports -->
+
+            <button
+                type="button"
+                class="sidebar-item"
+                data-section="reports"
+            >
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>
+                    Reports
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- Sidebar Footer -->
+
+        <div class="sidebar-footer">
+
+            <button
+                type="button"
+                class="logout-btn"
+                id="logoutBtn"
+            >
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         MAIN AREA
+         ================================================= -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+                <h1>
+                    Subjects
+                </h1>
+
+                <p id="topbarDepartment">
+                    Department
+                </p>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <!-- Notification -->
+
+                <button
+                    type="button"
+                    class="notification-button"
+                    id="notificationButton"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span
+                        class="notification-dot"
+                        id="notificationCount"
+                    >
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <button
+                    type="button"
+                    class="profile-button"
+                    id="profileButton"
+                >
+
+                    <div class="profile-avatar">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong id="profileName">
+                            HOD
+                        </strong>
+
+                        <span>
+                            Head of Department
+                        </span>
+
+                    </div>
+
+
+                    <i
+                        class="fa-solid fa-chevron-down profile-arrow"
+                    ></i>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             SUBJECTS CONTENT
+             ================================================= -->
+
+        <section class="subjects-page-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="subjects-page-header">
+
+
+                <div>
+
+                    <div class="subjects-page-label">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        <span>
+                            Academic Management
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+                        Subjects
+                    </h2>
+
+
+                    <p>
+                        Manage subjects and academic structure for your department.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="subjects-department-badge"
+                    id="subjectsDepartmentName"
+                >
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                    <span>
+                        Loading department...
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIC FILTERS -->
+
+            <div class="subjects-filter-panel">
+
+
+                <div class="subjects-filter-heading">
+
+                    <div>
+
+                        <span class="subjects-filter-label">
+                            Academic Structure
+                        </span>
+
+                        <h3>
+                            Select subjects to view
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Academic Year -->
+
+                <div
+                    class="subjects-filter-group"
+                    id="academicYearGroup"
+                >
+
+                    <label for="academicYearSelect">
+                        Academic Year
+                    </label>
+
+                    <select
+                        id="academicYearSelect"
+                    >
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option value="SE">
+                            SE
+                        </option>
+
+                        <option value="TE">
+                            TE
+                        </option>
+
+                        <option value="BE">
+                            BE
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Semester -->
+
+                <div class="subjects-filter-group">
+
+                    <label for="semesterSelect">
+                        Semester
+                    </label>
+
+                    <select
+                        id="semesterSelect"
+                    >
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Add Subject -->
+
+                <div class="subjects-filter-action">
+
+                    <button
+                        type="button"
+                        id="addSubjectBtn"
+                        class="add-subject-button"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Subject
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBJECT TABLE -->
+
+            <div class="subjects-table-panel">
+
+
+                <div class="subjects-table-header">
+
+
+                    <div>
+
+                        <h3 id="subjectListTitle">
+                            Subjects
+                        </h3>
+
+                        <p id="subjectListSubtitle">
+                            Select an academic year and semester to view subjects.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="subjects-refresh-button"
+                        id="refreshSubjectsBtn"
+                    >
+
+                        <i class="fa-solid fa-rotate"></i>
+
+                        Refresh
+
+                    </button>
+
+                </div>
+
+
+                <!-- TABLE -->
+
+                <div
+                    class="subjects-table-wrapper"
+                    id="subjectsTableWrapper"
+                >
+
+                    <div class="subjects-empty">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        <h3>
+                            Select an academic structure
+                        </h3>
+
+                        <p>
+                            Choose the academic year and semester to view subjects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =================================================
+     SUBJECT MODAL
+     ================================================= -->
+
+<div
+    class="subject-modal-overlay"
+    id="subjectModalOverlay"
+    aria-hidden="true"
+>
+
+    <div
+        class="subject-modal"
+        id="subjectModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="subjectModalTitle"
+    >
+
+
+        <!-- Modal Header -->
+
+        <div class="subject-modal-header">
+
+            <div class="subject-modal-heading">
+
+                <div class="subject-modal-avatar">
+
+                    <i class="fa-solid fa-book"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span
+                        class="subject-modal-eyebrow"
+                        id="subjectModalEyebrow"
+                    >
+                        Subject Management
+                    </span>
+
+                    <h3 id="subjectModalTitle">
+                        Add Subject
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="subject-modal-close"
+                id="subjectModalClose"
+                aria-label="Close"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Modal Body -->
+
+        <div
+            class="subject-modal-body"
+            id="subjectModalBody"
+        >
+
+            <form id="subjectForm">
+
+
+                <div class="subject-form-group">
+
+                    <label for="subjectName">
+                        Subject Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subjectName"
+                        placeholder="Enter subject name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="subject-form-group">
+
+                    <label for="subjectCode">
+                        Subject Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subjectCode"
+                        placeholder="e.g. CS301"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="subject-form-grid">
+
+
+                    <div class="subject-form-group">
+
+                        <label for="modalAcademicYear">
+                            Academic Year
+                        </label>
+
+                        <select
+                            id="modalAcademicYear"
+                            required
+                        >
+
+                            <option value="">
+                                Select Year
+                            </option>
+
+                            <option value="FE">
+                                FE
+                            </option>
+
+                            <option value="SE">
+                                SE
+                            </option>
+
+                            <option value="TE">
+                                TE
+                            </option>
+
+                            <option value="BE">
+                                BE
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="subject-form-group">
+
+                        <label for="modalSemester">
+                            Semester
+                        </label>
+
+                        <select
+                            id="modalSemester"
+                            required
+                        >
+
+                            <option value="">
+                                Select Semester
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="subject-form-error"
+                    id="subjectFormError"
+                ></div>
+
+
+            </form>
+
+        </div>
+
+
+        <!-- Modal Footer -->
+
+        <div class="subject-modal-footer">
+
+            <button
+                type="button"
+                class="subject-modal-secondary"
+                id="subjectModalCancel"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="button"
+                class="subject-modal-primary"
+                id="saveSubjectBtn"
+            >
+                Save Subject
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     TOAST
+     ================================================= -->
+
+<div
+    class="dashboard-toast-container"
+    id="dashboardToastContainer"
+>
+
+    <div
+        class="dashboard-toast"
+        id="dashboardToast"
+    >
+
+        <div
+            class="dashboard-toast-icon"
+            id="dashboardToastIcon"
+        >
+
+            <i class="fa-solid fa-circle-check"></i>
+
+        </div>
+
+
+        <div class="dashboard-toast-content">
+
+            <strong id="dashboardToastTitle">
+                Success
+            </strong>
+
+            <span id="dashboardToastMessage">
+            </span>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="dashboard-toast-close"
+            id="dashboardToastClose"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =================================================
+     JAVASCRIPT
+     ================================================= -->
+
+<script src="src/JS/subjects.js"></script>
+
+</body>
+
+</html>

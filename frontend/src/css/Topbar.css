@@ -1,0 +1,324 @@
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.topbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 8;
+
+    height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        0 32px;
+
+    background:
+        rgba(255, 255, 255, 0.60);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.72);
+
+    box-shadow:
+        0 5px 20px
+        rgba(30, 65, 100, 0.05);
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+}
+
+
+/* =========================================================
+   LEFT
+   ========================================================= */
+
+.topbar-left {
+
+    min-width: 0;
+}
+
+
+.topbar-left h1 {
+
+    color: #173657;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+.topbar-left p {
+
+    color: #71869c;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   RIGHT
+   ========================================================= */
+
+.topbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+.notification-button {
+
+    position: relative;
+
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(210, 222, 235, 0.75);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.60);
+
+    color: #536d87;
+
+    cursor: pointer;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.notification-button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.90);
+
+    color: #3267ad;
+}
+
+
+.notification-button > i {
+
+    font-size: 14px;
+}
+
+
+.notification-dot {
+
+    position: absolute;
+
+    top: 5px;
+    right: 5px;
+
+    min-width: 14px;
+    height: 14px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 3px;
+
+    border-radius: 20px;
+
+    background: #e54c4c;
+
+    color: white;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.90);
+}
+
+
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
+.profile-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 4px;
+
+    border: none;
+
+    background: transparent;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border-radius: 12px;
+}
+
+
+.profile-button:hover {
+
+    background:
+        rgba(255, 255, 255, 0.45);
+}
+
+
+.profile-avatar {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e2ebf6,
+            #c9d9eb
+        );
+
+    color: #466b8e;
+
+    font-size: 14px;
+}
+
+
+.profile-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 2px;
+}
+
+
+.profile-info strong {
+
+    max-width: 150px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    color: #304b66;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.profile-info span {
+
+    color: #8495a7;
+
+    font-size: 8px;
+}
+
+
+.profile-arrow {
+
+    color: #8292a2;
+
+    font-size: 9px;
+
+    margin-left: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .topbar {
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: 65px;
+
+        padding:
+            0 15px;
+    }
+
+
+    .topbar-left h1 {
+
+        font-size: 17px;
+    }
+
+
+    .topbar-left p {
+
+        font-size: 9px;
+    }
+
+
+    .profile-info,
+    .profile-arrow {
+
+        display: none;
+    }
+
+
+    .topbar-right {
+
+        gap: 8px;
+    }
+
+}
